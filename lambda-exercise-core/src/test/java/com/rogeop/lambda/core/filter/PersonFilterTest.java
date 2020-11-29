@@ -2,7 +2,7 @@ package com.rogeop.lambda.core.filter;
 
 import java.nio.file.Path;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ import org.junit.jupiter.api.io.TempDir;
 
 /**
  * Tests PersonFilter
- * 
+ *
  * @author Robert Pepersack
  */
 public class PersonFilterTest {
@@ -24,8 +24,8 @@ public class PersonFilterTest {
     @TempDir
     static Path sharedTempDir;
 
-    @BeforeAll
-    public void beforeAll() {
+    @BeforeEach
+    public void beforeEach() {
         personFilter = new PersonFilter();
     }
 
@@ -36,6 +36,7 @@ public class PersonFilterTest {
     @Order(1)
     public void test() {
         Path file = sharedTempDir.resolve("test.txt");
+        System.out.print("file: " + file);
     }
 
 }
