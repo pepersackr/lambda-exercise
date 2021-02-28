@@ -14,7 +14,7 @@ public class IterateParents {
      */
     public PanelA findFirstPanelAParent(Component component) {
         PanelA panelA = Stream.iterate(component, Component::getParent).filter(Objects::nonNull)
-                .filter(c -> c instanceof PanelA).map(PanelA.class::cast).findFirst().get();
+                .filter(c -> c instanceof PanelA).findFirst().map(PanelA.class::cast).get();
         return panelA;
     }
 
