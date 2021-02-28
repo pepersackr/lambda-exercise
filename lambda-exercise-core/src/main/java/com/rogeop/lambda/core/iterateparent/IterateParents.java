@@ -10,7 +10,7 @@ public class IterateParents {
 
     /**
      * Iterates parents of a specified Component and finds the first instance of a
-     * specified Component subclass
+     * PanelA
      */
     public PanelA findFirstPanelAParent(Component component) {
         PanelA panelA = Stream.iterate(component, Component::getParent).filter(Objects::nonNull)
