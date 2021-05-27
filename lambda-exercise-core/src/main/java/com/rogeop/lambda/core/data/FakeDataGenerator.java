@@ -116,7 +116,7 @@ public class FakeDataGenerator {
     public static void main(String[] args) throws IOException {
         // new FakeDataGenerator().generateJsonFile(5000000,
         // "C:\\Users\\Robert\\person5000000-1.json");
-        new FakeDataGenerator().generateJsonFileParallelIntStream(5000000, "C:\\Users\\Robert\\person5M.json");
+        new FakeDataGenerator().generateJsonFileParallelIntStream(10000, "C:\\Users\\Robert\\person10K.json");
     }
 
 }

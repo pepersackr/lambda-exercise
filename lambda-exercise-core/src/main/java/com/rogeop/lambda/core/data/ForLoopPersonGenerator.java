@@ -15,7 +15,7 @@ import it.unimi.dsi.util.XoRoShiRo128PlusRandom;
 /**
  * @author Robert Pepersack
  */
-public class ForLoopPersonGenerator implements DataGenerator<Person> {
+public class ForLoopPersonGenerator implements IDataGenerator<Person> {
 
     private final XoRoShiRo128PlusRandom prng;
     private final Faker faker;

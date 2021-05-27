@@ -41,7 +41,7 @@ public class PersonFilter implements CriteriaFilter<Person, PersonCriteria> {
 
         criteria.getDog().ifPresent(s -> predicates.add(p -> startsWithIgnoreCase(trim(p.getDog()), s)));
 
-        List<Person> results = data.parallelStream().filter(predicates.stream().reduce(i -> true, Predicate::and))
+        List<Person> results = data.stream().filter(predicates.stream().reduce(i -> true, Predicate::and))
                 .collect(Collectors.toList());
 
         return results;

@@ -21,7 +21,7 @@ import it.unimi.dsi.util.XoRoShiRo128PlusRandom;
 /**
  * @author Robert Pepersack
  */
-public class ParallelStreamPersonGenerator implements DataGenerator<Person> {
+public class ParallelStreamPersonGenerator implements IDataGenerator<Person> {
 
     private final XoRoShiRo128PlusRandom prng = new XoRoShiRo128PlusRandom();
     private final Faker faker = new Faker(new Locale("en-US"));;
