@@ -6,6 +6,7 @@ import java.util.Optional;
 /**
  * @author Robert Pepersack
  */
+@FunctionalInterface
 public interface IBoolean {
 
     public boolean evaluate(Map<String, Boolean> context);
